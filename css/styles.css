@@ -1,0 +1,420 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@800&display=swap');
+
+
+html {
+    font-size: 100%;
+}
+
+
+
+
+/* Navbar Styles 
+--------------------------------------------------------------------------------------------*/
+/* brand.logo */
+.navbar-brand img {
+    height: 33px; 
+    width: auto;
+}
+
+
+.navbar {
+    background-color: #ffffff;
+    margin-bottom: 0;
+
+}
+
+.navbar .nav-link {
+    color: #440092;
+    font-weight: bold;  /* This makes the font weight bold */
+    transition: 0.3s;
+    font-size: 1.2rem;
+}
+
+.navbar .nav-link:hover {
+    color: #33006b;  /* Slightly darker purple for hover */
+
+}
+
+/* 通常のナビゲーションリンクのホバーエフェクト */
+.navbar .nav-link:not(.btn-contact):hover {
+    position: relative;
+    color: #33006b; 
+}
+
+.navbar .nav-link:not(.btn-contact):hover::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 6px;  /* この値を調整して、線の位置を上下に動かすことができます */
+    border-bottom: 2px solid #33006b;
+}
+
+/* btn */
+.navbar .nav-link.btn-contact {
+    background-color: #440092;
+    color: #ffffff; 
+    border-radius:  12px;
+    padding: 6px 15px;
+    transition: 0.3s;
+    display: inline-block;  /* Makes the link behave like a block element */
+}
+.navbar .nav-link.btn-contact:hover {
+    background-color: #33006b;
+    color: #ffffff;
+    transform: scale(1.05);  /* この値を調整することで、ホバー時の拡大率を変更できます */
+    transition: 0.3s;
+}
+
+/* お問い合わせボタンのデフォルトの状態 */
+.navbar .nav-link.btn-contact {
+    background-color: #440092;
+    color: #ffffff; 
+    border-radius: 12px;
+    padding: 6px 15px;
+    transition: transform 0.3s ease-in-out, background-color 0.3s, color 0.3s;  /* transform を追加 */
+    display: inline-block;  /* Makes the link behave like a block element */
+}
+
+
+/* hunberger
+--------------------------------------------------------------------------------------------*/
+.custom-toggler-icon {
+    display: inline-block;
+    width: 30px;
+    height: 4px;
+    background-color: #440092;
+    position: relative;
+    transition: 0.3s;
+}
+
+/* ハンバーガーメニューが非展開のときは境界線を非表示に */
+.navbar-collapse {
+    border-top: none;
+    border-bottom: none;
+}
+
+/* ハンバーガーメニューが展開されたときのみ境界線を表示 */
+.navbar-toggler[aria-expanded="true"] + .navbar-collapse {
+    border-top: 2px solid rgb(68,0,145);
+}
+
+
+.custom-toggler-icon::before,
+.custom-toggler-icon::after {
+    content: "";
+    background-color: rgb(68, 0, 145);
+    display: block;
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    left: 0;
+    transition: 0.3s;
+}
+
+.custom-toggler-icon::before {
+    top: -10px;
+}
+
+.custom-toggler-icon::after {
+    top: 10px;
+}
+
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.navbar-toggler {
+    margin-bottom: 7px;  /* この値を調整して、ボタンの位置を上下に動かします。 */
+}
+
+
+
+
+/* Main Styles 
+--------------------------------------------------------------------------------------------*/
+
+.no-padding {
+    padding: 0 !important;
+}
+
+.img-full-width {
+    width: 100%;
+}
+
+.container-fluid {
+    margin-top: 0;
+}
+
+.row.mb-4 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.img-fluid {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Unified background color******************** */
+.unified-bg {
+    background-color: #440092;
+}
+
+
+/* popup Styles 
+--------------------------------------------------------------------------------------------*/
+.container-thinking {
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 0.9rem !important;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.container-thinking .btn {
+    background-color: #ffffff;
+    color: #440092;
+    border: none;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    font-size: 1.0rem;
+    font-weight: bold;
+}
+
+.container-thinking .btn:hover {
+    background-color: #33006b;
+    color: #ffffff;
+}
+
+
+
+/* about2 Styles 
+--------------------------------------------------------------------------------------------*/
+.custom-header-color h3 {
+    color: #440092; /* この色を変更して希望の色に設定できます */
+    font-weight: 800;
+}
+
+/* カードのホバーアクションスタイル */
+.card:hover {
+    transform: scale(1.05);  /* カードを5%大きくします */
+    transition: 0.3s ease-in-out; /* 0.3秒のアニメーションで大きくします */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* 影を少し大きくして、浮き上がっているように見せます */
+}
+
+/* カードのデフォルトの状態 */
+.card {
+    transition: 0.3s ease-in-out; /* アニメーションの効果 */
+}
+
+
+
+/* News Styles 
+--------------------------------------------------------------------------------------------*/
+
+.news-section {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 20px 0;
+}
+
+.news-title {
+    font-size: 2.0rem;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.news-list {
+    list-style: none;
+    padding: 0;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.news-item {
+    color: #ffffff;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.news-item:not(:last-child) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+
+/* Unified background color end ******************** */
+
+
+/* footer Styles 
+--------------------------------------------------------------------------------------------*/
+
+.footer-modern {
+    background-color: #22192c; /* メインカラー */
+    color: #ffffff;
+    padding: 40px 0;
+}
+
+.footer-modern .footer-logo {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.footer-logo img {
+    width: 66px;  /* この値を調整してロゴの幅を変更します */
+    height: auto;  /* 高さは自動的に調整されるため、アスペクト比が保たれます */
+}
+
+
+.footer-modern .footer-nav a {
+    color: white; /* リンクの色を白色に設定 */
+}
+
+.footer-modern .footer-nav li {
+    margin-bottom: 10px; /* リストアイテム間のスペースを調整 */
+}
+
+.footer-modern .col-md-4 {
+    display: flex;
+    align-items: center; /* 上下中央揃え */
+    justify-content: center; /* 左右中央揃え */
+}
+
+
+/* ボタンのスタイル設定 */
+.footer-contact a {
+    background-color: #440092;
+    color: #ffffff;
+    border-radius: 12px;
+    padding: 6px 15px;
+    transition: 0.3s;  /* アニメーションの効果 */
+    display: inline-block;  /* Makes the link behave like a block element */
+    transform: scale(1);  /* デフォルトのサイズ */
+}
+
+.footer-contact a:hover {
+    background-color: #33006b;
+    color: #ffffff;
+    transform: scale(1.05);  /* ホバー時に5%大きくする */
+}
+
+/* about-us.html css  ***************************************************************
+************************************************************************************* */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+}
+
+.container-about {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.container-about h3 {
+    color: #440092;
+    border-bottom: 2px solid #440092;
+    padding-bottom: 10px;
+    font-size: 2.0rem;
+    font-weight: bold;
+}
+
+.table {
+    font-size: 1.0rem;
+}
+
+td {
+    vertical-align: middle;
+}
+
+
+.unified2-bg {
+    background-color: #440092; /* 例として灰色を使用 */
+    padding-top: 2rem; /* mt-5 と同等のスペースを確保 */
+    padding-bottom: 2rem; /* mt-5 と同等のスペースを確保 */
+}
+
+.container-about h3{
+    font-size: 2.rem;
+}
+
+/* カスタムテーブルの行の高さ */
+.table-custom-spacing td,
+.table-custom-spacing th {
+    padding: 8px 16px; /* 上下のパディングを12px、左右のパディングを16pxに設定 */
+}
+
+
+/* contact-us.html css  ***************************************************************
+************************************************************************************* */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+}
+
+.container-contactus h3 {
+    color: #440092;
+    border-bottom: 2px solid #440092;
+    padding-bottom: 10px;
+    font-size: 2.0rem;
+    font-weight: bold;
+}
+
+.card-contactus {
+    border: none;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-contactus-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #440092;
+}
+
+.btn-primary {
+    background-color: #440092;
+    color: #ffffff; 
+    border-radius: 12px;
+    padding: 6px 40px;
+    transition: transform 0.3s ease-in-out, background-color 0.3s, color 0.3s;  /* transform を追加 */
+    display: inline-block;  /* Makes the link behave like a block element */
+    font-size: 1.3rem;
+    font-weight: bold;
+    
+}
+
+.btn-primary:hover {
+    background-color: #33006b;
+    color: #ffffff;
+    transform: scale(1.05);  /* この値を調整することで、ホバー時の拡大率を変更できます */
+    transition: 0.3s;
+}
+
+
+.form-row .col-md-3 label {
+    align-self: center;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 0rem;
+}
+
+.card-text {
+    font-size: 0.8rem;
+}
+
+h4 {
+    font-size: 0.97rem;
+}
+
+.required-mark {
+    color: #f00; /* 色を赤に */
+}
