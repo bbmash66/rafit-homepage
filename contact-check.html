@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>送信内容確認</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { padding-top: 20px; }
+        .container { max-width: 800px; }
+        .th-custom {
+            background-color: #f0f0f0; /* 背景色 */
+            color: #333; /* テキスト色 */
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h3 class="mb-4" style="text-align: center;">以下の内容でよろしければ「送信」ボタンを押して下さい。</h3>
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <tbody id="formDataDisplay">
+                    <!-- ここにフォームデータが表示されます -->
+                </tbody>
+            </table>
+        </div>
+        <div class="text-center mt-4">
+            <button onclick="submitForm()" class="btn btn-primary">送信</button>
+            <button onclick="history.back()" class="btn btn-secondary">修正</button>
+        </div>
+    </div>
+
+    <script>
+    const formData = JSON.parse(sessionStorage.getItem("formData"));
+    const displayArea = document.getElementById("formDataDisplay");
+
+    // キーを日本語に変換するためのオブジェクト
+    const keyMap = {
+        "inquiryType": "お問い合わせの項目",
+        "companyName": "会社名・団体名",
+        "name": "氏名（担当者名）",
+        "furigana": "フリガナ",
+        "phone": "電話番号",
+        "fax": "FAX番号",
+        "postalCode": "郵便番号",
+        "address": "住所",
+        "email": "メールアドレス",
+        "confirmEmail": "メールアドレス（確認）",
+        "inquiry": "お問い合わせ内容"
+    };
+
+    for (const key in formData) {
+        const tr = document.createElement("tr");
+        const japaneseKey = keyMap[key] || key; // キーマップにない場合は元のキーを使用
+        tr.innerHTML = `<th scope="row" class="th-custom">${japaneseKey}</th><td>${formData[key]}</td>`;
+        displayArea.appendChild(tr);
+    }
+    </script>
+    <script>
+        function submitForm() {
+          const formData = JSON.parse(sessionStorage.getItem("formData"));
+          fetch("https://script.google.com/macros/s/AKfycbyQaVlYKiLtxxqqk2IJ34RvUQ7AZ9ecxovgvb-CXq-shvT8m7bmsUZ9HcKdBXzqzew/exec", {
+            method: 'POST',
+            mode: 'no-cors', // CORSポリシーによる制限を回避
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData)
+          })
+          .then(response => {
+            console.log('Success:', response);
+            // 送信成功後の処理（例: 送信完了ページへのリダイレクトなど）
+            window.location.href = "contact-us.html?message=お問い合わせ内容を送信いたしました。"; // リダイレクト
+
+          })
+          .catch((error) => {
+            console.error('Error:', error);
+          });
+        }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

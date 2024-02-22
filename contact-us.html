@@ -1,0 +1,248 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="Description" content="当社は、生活雑貨、日用品関連商品の小売、卸売販売を専門としている会社です。海外輸入や国内取引等、多岐に事業を展開しております。お客様のご要望に応じて、必要な商品の企画・提供に取り組んでおります。">
+    <meta name="Keywords" content="コーポレートサイト, 小売販売, 卸売販売">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <title>コーポレートサイト</title>
+    <!-- External CSS and JS links -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/script.js" defer></script>
+     <!-- FontAwesome CDN -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-right bg-right sticky-top">
+    <a class="navbar-brand" href="./index.html"><img src="images/logo.png" alt="rafit-logo"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="custom-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="./index.html">ホーム</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./business.html">事業内容</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./about-us.html">会社概要</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link btn-contact" href="./contact-us.html">お問い合わせ</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Main Content -->
+<!-- contact-top-image -->
+
+
+<div class="unified2-bg">
+    <!-- Contact Form Section -->
+    <div class="container-about ml-5 mr-5">
+        <div class="card-body">
+            <h3 class="mb-4">お問い合わせフォーム</h3>
+            <p>以下の項目にご記入の上、最下部の[送信]ボタンを押してください。<br>
+                <span class="required-mark">※</span>印は入力必須項目です。</p>
+            <!-- フォームにidを追加 -->
+            <form id="myForm">
+                <div class="form-row mt-2">
+                    <label class="col-md-3 text-md-right text-left " for="inquiry-type"><span class="required-mark">※</span>お問い合わせの項目</label>
+                    <div class="col-md-3">
+                        <select class="form-control form-control-sm" id="inquiry-type">
+                            <option>新規取引希望</option>
+                            <option>商品リスト希望</option>
+                            <option>その他</option>
+                            <option>SNS運用代行</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row mt-2 align-items-center">
+                    <label class="col-md-3 text-md-right text-left" for="company-name">会社名・団体名</label>
+                    <div class="col-md-3">
+                        <input type="text" class="form-control form-control-sm" id="company-name">
+                    </div>
+                </div>
+                <div class="form-row mt-2 align-items-center">
+                    <label class="col-md-3 text-md-right text-left" for="name"><span class="required-mark">※</span>氏名（担当者名）</label>
+                    <div class="col-md-3">
+                        <input type="text" class="form-control form-control-sm" id="name" required>
+                    </div>
+                    <label class="col-md-2 text-md-right text-left" for="furigana"><span class="required-mark">※</span>フリガナ</label>
+                    <div class="col-md-3">
+                        <input type="text" class="form-control form-control-sm" id="furigana" required>
+                    </div>
+                </div>
+                <div class="form-row mt-2 align-items-center">
+                    <label class="col-md-3 text-md-right text-left" for="phone"><span class="required-mark">※</span>電話番号</label>
+                    <div class="col-md-3">
+                        <input type="text" class="form-control form-control-sm" id="phone" required>
+                    </div>
+                    <label class="col-md-2 text-md-right text-left" for="fax">FAX番号</label>
+                    <div class="col-md-3">
+                        <input type="text" class="form-control form-control-sm" id="fax">
+                    </div>
+                </div>
+                <div class="form-row mt-2 align-items-center">
+                    <label class="col-md-3 text-md-right text-left" for="postal-code">郵便番号</label>
+                    <div class="col-md-3">
+                        <input type="text" class="form-control form-control-sm" id="postal-code">
+                    </div>
+                </div>
+                <div class="form-row mt-2 align-items-center">
+                    <label class="col-md-3 text-md-right text-left" for="address">住所</label>
+                    <div class="col-md-9">
+                        <input type="text" class="form-control form-control-sm" id="address">
+                    </div>
+                </div>
+                <div class="form-row mt-2 align-items-center">
+                    <label class="col-md-3 text-md-right text-left" for="email"><span class="required-mark">※</span>メールアドレス</label>
+                    <div class="col-md-4">
+                        <input type="email" class="form-control form-control-sm" id="email" required>
+                    </div>
+                </div>
+                <div class="form-row mt-2 align-items-center">
+                    <label class="col-md-3 text-md-right text-left" for="confirm-email"><span class="required-mark">※</span>確認用メールアドレス</label>
+                    <div class="col-md-4">
+                        <input type="email" class="form-control form-control-sm" id="confirm-email" required>
+                    </div>
+                </div>
+                <div class="form-row mt-2 align-items-center">
+                    <label class="col-md-3 text-md-right text-left" for="inquiry"><span class="required-mark">※</span>お問い合わせ内容</label>
+                    <div class="col-md-9">
+                        <textarea class="form-control form-control-sm" id="inquiry" rows="4" required></textarea>
+                    </div>
+                </div>
+                <div class="mt-3 d-flex justify-content-center">
+                    <button type="submit" class="btn btn-primary">送信</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+    <!-- Privacy Policy Section -->
+<!-- Privacy Policy Section -->
+<div class="container-about ml-5 mr-5 mt-2 mb-4 ">
+    <div class="card-body">
+        <h3 class="card-contactus-title">プライバシーポリシー （個人情報保護方針）</h3>
+        
+        <h4 class="border p-2">個人情報の管理</h4>
+        <p class="card-text">
+            当社は、クライアント様の個人情報を正確かつ最新の状態に保ち、個人情報への不正アクセス・紛失・破損・改ざん・漏洩などを防止するため、セキュリティシステムの維持・管理体制の整備・従業員教育の徹底等の必要な措置を講じ、安全対策を実施し個人情報の厳重な管理を行ないます。
+        </p>
+
+        <h4 class="border p-2">個人情報の取得および利用</h4>
+        <p class="card-text">
+            当社は、個人情報を取得する場合には利用目的を明示し、その目的達成に足る必要範囲内で適正に取得させていただきます。また個人情報を利用するにあたっては、利用目的の範囲内の利用のみとし、その目的の範囲を超えた利用はいたしません。
+        </p>
+
+        <h4 class="border p-2">個人情報の利用目的</h4>
+        <p class="card-text">
+            クライアント様からお預かりした個人情報は、当社からのご連絡や業務のご案内やご質問に対する回答として、電子メールや資料のご送付に利用いたします。
+        </p>
+
+        <h4 class="border p-2">個人情報の第三者への開示・提供の禁止</h4>
+        <p class="card-text">
+            当社は、クライアント様よりお預かりした個人情報を適切に管理し、次のいずれかに該当する場合を除き、個人情報を第三者に開示いたしません。
+        </p>
+        
+        <h4 class="border p-2">クライアント様の同意がある場合</h4>
+        <p class="card-text">
+            クライアント様が希望されるサービスを行なうために当社が業務を委託する業者に対して開示する場合。裁判所・警察などの公的機関から開示・提供の要請があった場合。
+        </p>
+
+        <h4 class="border p-2">法令等の遵守</h4>
+        <p class="card-text">
+            当社は、個人情報保護法その他関係法令、及びガイドライン等を遵守いたします。
+        </p>
+    </div>
+</div>
+
+
+
+ <!-- Footer -->
+ <footer class="footer-modern text-center text-white">
+    <div class="container">
+        <div class="row">
+            <!-- ロゴまたはブランド名 -->
+            <div class="col-md-4">
+                <div class="footer-logo">
+                    <img src="images/footer-logo.png" alt="ラフィットロゴ" />
+                </div>
+            </div>
+            <!-- ナビゲーションリンク -->
+            <div class="col-md-4">
+                <div class="footer-nav">
+                    <ul class="list-unstyled">
+                        <li><a href="./index.html">ホーム</a></li>
+                        <li><a href="./business.html">事業内容</a></li>
+                        <li><a href="./about-us.html">会社概要</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- お問い合わせボタン -->
+            <div class="col-md-4">
+                <div class="footer-contact">
+                    <a href="./contact-us.html" class="btn btn-primary">お問い合わせ</a>
+                </div>
+            </div>
+        </div>
+        <!-- コピーライト情報 -->
+        <div class="footer-copyright mt-3">
+            © 2020-2024 rafit.llc. All rights reserved.
+        </div>
+    </div>
+</footer>
+
+<script>
+    document.getElementById("myForm").onsubmit = function(e) {
+        e.preventDefault(); // フォームのデフォルト送信を防止
+    
+        // フォームデータをオブジェクトとして取得
+        const formData = {
+            inquiryType: document.getElementById("inquiry-type").value,
+            companyName: document.getElementById("company-name").value,
+            name: document.getElementById("name").value,
+            furigana: document.getElementById("furigana").value,
+            phone: document.getElementById("phone").value,
+            fax: document.getElementById("fax").value,
+            postalCode: document.getElementById("postal-code").value,
+            address: document.getElementById("address").value,
+            email: document.getElementById("email").value,
+            confirmEmail: document.getElementById("confirm-email").value,
+            inquiry: document.getElementById("inquiry").value
+        };
+    
+        // フォームデータをセッションストレージに保存
+        sessionStorage.setItem("formData", JSON.stringify(formData));
+    
+        // ユーザーを確認ページにリダイレクト
+        window.location.href = "contact-check.html";
+    };
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const message = urlParams.get('message');
+      if (message) {
+        alert(message); // または、ページ内の特定の要素にメッセージを表示する
+      }
+    });
+</script>
+
+
+</body>
+</html>
